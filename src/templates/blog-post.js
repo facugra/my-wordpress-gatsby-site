@@ -104,15 +104,7 @@ export const pageQuery = graphql`
       featuredImage {
         node {
           altText
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                quality: 100
-                placeholder: TRACED_SVG
-                layout: FULL_WIDTH
-              )
-            }
-          }
+          gatsbyImage(width: 300)
         }
       }
     }
