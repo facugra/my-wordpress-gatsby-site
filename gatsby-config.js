@@ -1,17 +1,9 @@
 const plugins = [
   {
-    /**
-     * First up is the WordPress source plugin that connects Gatsby
-     * to your WordPress site.
-     *
-     * visit the plugin docs to learn more
-     * https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wordpress/README.md
-     *
-     */
     resolve: `gatsby-source-wordpress`,
     options: {
-      // the only required plugin option for WordPress is the GraphQL url.
       url: "https://cms.eqm-int.com/graphql",
+      // removing the following block shows images, but removes their linking capabilities
       html: {
         placeholderType: "blurred",
       },
@@ -34,21 +26,9 @@ const plugins = [
   `gatsby-plugin-image`,
 
   "gatsby-plugin-react-helmet",
-
-  /**
-   * this (optional) plugin enables Progressive Web App + Offline functionality
-   * To learn more, visit: https://gatsby.dev/offline
-   */
-  // `gatsby-plugin-offline`,
 ]
 
 module.exports = {
-  /**
-   * Adding plugins to this array adds them to your Gatsby site.
-   *
-   * Gatsby has a rich ecosystem of plugins.
-   * If you need any more you can search here: https://www.gatsbyjs.com/plugins/
-   */
   graphqlTypegen: true,
   plugins,
   trailingSlash: "never",
